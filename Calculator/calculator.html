@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+</head>
+<body>
+
+<h2>Basic Calculator</h2>
+
+
+First Number:
+<input type="number" id="num1"><br><br>
+
+Second Number:
+<input type="number" id="num2"><br><br>
+
+
+<input type="image" src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"
+       width="40" onclick="add()" title="Add">
+
+<input type="image" src="https://cdn-icons-png.flaticon.com/512/1828/1828899.png"
+       width="40" onclick="sub()" title="Subtract">
+
+<input type="image" src="https://icons.veryicon.com/png/o/education-technology/calculator/multiplication-sign.png"
+       width="40" onclick="mul()" title="Multiply">
+
+<input type="image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAACenp6NjY3T09OWlpbq6ur19fWjo6Pc3NxPT09LS0tfX1+bm5vk5OQYGBh7e3svLy9nZ2cdHR3GxsYODg7JycmysrJVVVW7u7uCgoI9PT1EREQqKiqoqKhdXV1OiBgNAAACCklEQVR4nO3di26CQBCFYRYRBbVe6137/m9ZrTGpCJTAkqGH/3uCc4KKJMtMEAAAAAAAAAAAAAAAAAAAaonCVTpJV2FkHaQl4do9rcfWYVqw+XQvNtaBfBu4rIF1JL8WbwWdW1iH8mmYU9C5oXUsf6Lcgs7p/KaeCxqerYP5sikoqPODOi1sOLWO5seosKBzI+twXmxLGm6tw3kxLmmo8e8t/2b4oHFL1G84K2k4sw7nxa6k4c46nBcfJQ0/rMP5cSksuLSO5sn7s+GTyjNiXNgwto7mS9FFVLmEN0vpb+Fd/udU5jN6l8zf+s0T61B+xWmmYCp1BX9cXwpereO0Yrd/fFbne40/a3lGSRRFicaDPQAAAAAAAAAAAACgiw5hlx0a9ys7/toNDQ/hflnnr6DRSxt5r5x1T4OX4BLr7BXVP2l8tI5e0bF2w5N19IpOtRvmHwvtnvoHVfWvof738L/8ljY4iyt/PwyClXX6Chq+iBpa5/9T2KxgoP9sAQAAAAAAAAAAAABAPvU5Ueqzvl7ntWkMgf4tnmQOiUzEZu4lmQ0lTm1uov7sS/n5pfIzaPXnCOvPgi6e532xjuaH/kx2/bn6+rsR9Pdb6DfU3zOjvytIf9+T/s6uHuxd09+d14P9h/o7LHuwh7QHu2R7sA/4Ziy+0/lOfS83AAAAAAAAAAAAAAAAALTuGy/SGT6Zuuz+AAAAAElFTkSuQmCC"
+       width="40" onclick="div()" title="Divide">
+
+<br><br>
+
+
+Result:
+<input type="text" id="result" readonly>
+
+<script>
+function add() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").value = a + b;
+}
+
+function sub() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").value = a - b;
+}
+
+function mul() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").value = a * b;
+}
+
+function div() {
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    document.getElementById("result").value = a / b;
+}
+</script>
+
+</body>
+</html>

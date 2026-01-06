@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy New Year 2026</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: #fff;
+            width: 350px;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(50px); }
+            100% { transform: translateY(); }
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .year {
+            font-size: 48px;
+            font-weight: bold;
+            color: #00ffd5;
+            margin: 20px 0;
+        }
+
+        .from {
+            margin-top: 25px;
+            font-style: italic;
+            color: #ffddaa;
+        }
+
+        .sparkles {
+            font-size: 33px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="sparkles">✨ 🎉 ✨</div>
+        <h1>Happy New Year</h1>
+        <div class="year">2026</div>
+        <h2>Welcome New Beginnings</h2>
+        <p>
+            May this year bring you<br>
+            happiness, success, good health,<br>
+            and beautiful moments 💖
+        </p>
+        <div class="from">
+            — Best Wishes,<br>
+            <strong>Hariom Nagar</strong>
+        </div>
+    </div>
+
+</body>
+</html>
