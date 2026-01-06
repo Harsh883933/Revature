@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1: 15 Problem</title>
+</head>
+<body>
+    <h1 style="color: red;">Part 1:- 15 Problem Solution</h1>
+</body>
+<script src="solve.js">
+    //Call Stack & Event Loop
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Async Task");
+}, 0);
+
+console.log("End");
+
+//JSON.parse()
+let response = '{"id":101,"name":"Laptop","price":50000}';
+
+let obj = JSON.parse(response);
+console.log(obj.name);
+
+//JSON.stringify()
+let user = { username: "admin", role: "manager" };
+
+let jsonStr = JSON.stringify(user);
+console.log(jsonStr);
+
+//forEach() – Welcome Users
+let users = ["Hariom", "Manish", "Yash"];
+
+users.forEach(user => {
+  console.log(`Welcome, ${user}!`);
+});
+
+//map() – 10% Discount
+let prices = [1000, 2000, 3000];
+
+let discountedPrices = prices.map(price => price * 0.9);
+
+console.log(discountedPrices);
+
+//filter() – Available Products
+let products = [
+  { name: "Laptop", inStock: true },
+  { name: "Mouse", inStock: false },
+  { name: "Keyboard", inStock: true }
+];
+
+let availableProducts = products.filter(p => p.inStock);
+
+console.log(availableProducts);
+
+//reduce() – Cart Total
+let cart = [500, 1500, 2000];
+
+let total = cart.reduce((sum, price) => sum + price, 0);
+
+console.log(total);
+
+//Function Declaration vs Arrow Function
+function calculateGST(price) {
+  return price * 0.18;
+}
+
+const calculateGSTArrow = price => price * 0.18;
+
+//Closures – Secure Counter
+function counter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+let increment = counter();
+
+console.log(increment()); // 1
+console.log(increment()); // 2
+
+//Callback Function – Login Validation
+function validateUser(username, callback) {
+  if (username === "admin") {
+    callback("Login successful");
+  } else {
+    callback("Invalid user");
+  }
+}
+
+validateUser("admin", message => {
+  console.log(message);
+});
+
+//Callback Hell – Payment Processing
+validateUser(user, () => {
+  processPayment(() => {
+    generateInvoice(() => {
+      console.log("Done");
+    });
+  });
+});
+
+//Promises → async/await
+async function getData() {
+  let res = await fetch(url);
+  let data = await res.json();
+  console.log(data);
+}
+
+getData();
+
+//DOM Manipulation – Dynamic UI
+let ul = document.querySelector("ul");
+let li = document.createElement("li");
+
+li.textContent = "New Item";
+ul.appendChild(li);
+
+//Event Listener – Form Validation
+form.addEventListener("submit", function (e) {
+  if (input.value === "") {
+    e.preventDefault();
+    alert("Input required");
+  }
+});
+
+</script>
+</html>
